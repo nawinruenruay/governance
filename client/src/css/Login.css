@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.4) 50%
+    ),
+    url(/src/assets/kamphaengphet.jpg);
+
+  /* background-position: center; */
+  background-size: cover;
+}
+
+.loginBx {
+  border-radius: 10px;
+  /* background: white; */
+  margin: 40px;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  width: 400px;
+  height: 590px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* --- left box  ---- */
+.loginBx .left-bx {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loginBx .left-bx .content-login {
+  overflow: hidden;
+}
+
+.loginBx .left-bx .content-login .image {
+  overflow: hidden;
+  animation: moveImg 6s 0.5s infinite;
+  position: relative;
+}
+
+.loginBx .left-bx .content-login .image img {
+  width: 100%;
+  height: 290px;
+}
+
+/* @keyframes moveImg {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(-5deg);
+  }
+
+  75% {
+      transform: rotate(5deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
+} */
+
+/* ----- right box ---- */
+
+/* .loginBx .right-bx .content-login .login-Input .input-login:focus {
+  border: 2px solid black; 
+} */
+
+.loginBx .right-bx .content-login .logo {
+  text-align: center;
+  margin: 0 auto 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.loginBx .right-bx .content-login .logo img {
+  width: 80px !important;
+}
+
+.loginBx .right-bx {
+  /* border-right: 1px solid rgb(215, 213, 213); */
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.loginBx .right-bx .content-login {
+  width: 100%;
+}
+
+.loginBx .right-bx .content-login h2 {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+/* .loginBx .right-bx .content-login h2::after{content: ''; position: absolute; width: 50%; height: 3px; background: linear-gradient(#6FB1FC,#4761ff,#6FB1FC); bottom: -15px; left: 50%; transform: translate(-50%,-50%);} */
+
+.loginBx .right-bx .content-login .login-Input .inputBx {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  border: 2px solid rgb(227, 224, 224, 0.7);
+  margin-bottom: 25px;
+  padding: 23px;
+}
+
+.loginBx .right-bx .content-login .login-Input .input-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 50px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background: white;
+}
+
+.loginBx .right-bx .content-login .input-icon {
+  z-index: 99;
+  position: absolute;
+  /* font-size: 25px; */
+  color: black;
+  display: flex;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 30px;
+}
+
+/*-----  btn  -----*/
+/* .loginBx .right-bx .btn{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+} */
+
+.loginBx .right-bx .admin-loginBtn {
+  text-transform: uppercase;
+  width: 100%;
+  display: inline-block;
+  background: #3757f5;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+
+.loginBx .right-bx .admin-loginBtn:hover {
+  cursor: pointer;
+  background: #2334a0;
+}
+
+.loginBx .right-bx .goBack {
+  text-transform: uppercase;
+  width: 100%;
+  display: inline-block;
+  background: rgb(49, 48, 48);
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+
+.loginBx .right-bx .goBack:hover {
+  background: #000;
+}
+
+/* ===================================== */
+/*             #  media query  #         */
+/* ===================================== */
+
+/* @media only screen and (max-width:992px) {
+  .loginBx .right-bx {
+      padding: 15px;
+  }
+
+  .loginBx .right-bx .content-login h2 {
+      font-size: 30px;
+  }
+
+  .loginBx .right-bx .content-login .login-Input .inputBx {
+      margin-bottom: 25px;
+      padding: 20px;
+  }
+
+  .loginBx .right-bx .admin-loginBtn {
+      padding: 12px;
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .loginBx .right-bx {
+      padding: 20px;
+  }
+
+  .loginBx {
+      grid-template-columns: 1fr;
+      height: 80%;
+  }
+
+
+  .loginBx .right-bx .content-login .login-Input .inputBx {
+      padding: 23px;
+      margin-bottom: 30px;
+  }
+
+
+  .loginBx .left-bx .content-login {
+      max-width: 400px;
+  }
+} */
+
+@media only screen and (max-width: 480px) {
+  .loginBx {
+    margin: 20px;
+    height: 80%;
+  }
+
+  .loginBx .right-bx {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  .loginBx .right-bx .content-login h2 {
+    font-size: 20px;
+  }
+
+  .loginBx .right-bx .content-login .login-Input .inputBx {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .loginBx .right-bx .content-login .logo {
+    font-size: 14px;
+  }
+
+  .loginBx .right-bx .content-login .logo img {
+    width: 70px !important;
+  }
+
+  .loginBx .right-bx .content-login .login-Input .inputBx {
+    border: 1px solid rgb(227, 224, 224, 0.7);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .loginBx .right-bx .btn-submit {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .loginBx .right-bx .admin-loginBtn {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  .loginBx .right-bx .admin-loginBtn:hover {
+    cursor: pointer;
+    background: var(--blue-btn-hover);
+  }
+
+  .loginBx .right-bx .goBack {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  .loginBx .right-bx .content-login .input-icon {
+    font-size: 20px;
+    left: 20px;
+  }
+
+  .loginBx .right-bx .content-login .login-Input input {
+    padding: 0 0 0 35px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .loginBx {
+    margin: 20px;
+    height: 90%;
+  }
+
+  .loginBx .right-bx {
+    padding: 15px;
+  }
+
+  .loginBx .left-bx {
+    display: none;
+  }
+}
+
+/* *{border: 1px solid red;} */
